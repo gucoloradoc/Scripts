@@ -1,0 +1,36 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> awards <- c("Won 1 Oscar.",
++   "Won 1 Oscar. Another 9 wins & 24 nominations.",
++   "1 win and 2 nominations.",
++   "2 wins & 3 nominations.",
++   "Nominated for 2 Golden Globes. 1 more win & 2 nominations.",
++   "4 wins & 1 nomination.")
+> 
+> #The \\1 character returns the value captured by the [0-9]+ metacharacter.
+>   sub(".*\\s([0-9]+)\\snomination.*$", "\\1", awards)
+[1] "Won 1 Oscar." "24"           "2"            "3"            "2"           
+[6] "1"           
+> 
+> proc.time()
+   user  system elapsed 
+  0.168   0.024   0.189 
