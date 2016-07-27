@@ -2,7 +2,7 @@ library(datasets)
 library(magrittr)
 library(ggvis)
 library(dplyr)
-#Leyends
+#Legends
 # Add a legend
 faithful %>% 
   ggvis(~waiting, ~eruptions, opacity := 0.6, 
