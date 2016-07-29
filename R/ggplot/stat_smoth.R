@@ -15,6 +15,6 @@ ggplot(Vocab, aes(x = education, y = vocabulary, col= factor(year))) +
   scale_color_brewer()
 
 # Plot 4: Add the group, specify alpha and size
-ggplot(Vocab, aes(x = education, y = vocabulary, col = year, group= year)) +
+ggplot(Vocab, aes(x = education, y = vocabulary, col = year, group= factor(year))) +
   stat_smooth(method = "lm", se = F, alpha=0.6, size=2) +
   scale_color_gradientn(colors = brewer.pal(9,"YlOrRd"))
